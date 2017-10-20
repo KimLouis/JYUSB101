@@ -1,6 +1,6 @@
 ﻿namespace JYUSB101
 {
-    partial class AnalogInputForm
+    partial class MainForm
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -246,7 +246,7 @@
             this.label_title.TabIndex = 5;
             this.label_title.Text = "USB101模拟采集实验";
             // 
-            // AnalogInputForm
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -258,7 +258,7 @@
             this.Controls.Add(this.button_start);
             this.Controls.Add(this.groupBox_parameter);
             this.Controls.Add(this.chart_wave);
-            this.Name = "AnalogInputForm";
+            this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.AnalogInputForm_Load);
             this.groupBox_parameter.ResumeLayout(false);

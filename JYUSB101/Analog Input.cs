@@ -11,7 +11,7 @@ using JYUSB101;
 
 namespace JYUSB101
 {
-    public partial class AnalogInputForm : Form
+    public partial class MainForm : Form
     {
         #region Private Fields
         // 创建模拟采集任务
@@ -22,7 +22,7 @@ namespace JYUSB101
 
         #region Constructor
         // 初始化主窗口
-        public AnalogInputForm()
+        public MainForm()
         {
             InitializeComponent();
         }
