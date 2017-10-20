@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="JYUSB101, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\SeeSharp\JYTEK\Hardware\DAQ\JYUSB101\Bin\JYUSB101.dll</HintPath>
+    </Reference>
     <Reference Include="SeeSharpTools.JY.GUI">
       <HintPath>C:\SeeSharp\JYTEK\SeeSharpTools\Bin\SeeSharpTools.JY.GUI.dll</HintPath>
     </Reference>

@@ -130,31 +130,35 @@
             this.label_sampleRate.AutoSize = true;
             this.label_sampleRate.Location = new System.Drawing.Point(18, 337);
             this.label_sampleRate.Name = "label_sampleRate";
-            this.label_sampleRate.Size = new System.Drawing.Size(128, 21);
+            this.label_sampleRate.Size = new System.Drawing.Size(139, 21);
             this.label_sampleRate.TabIndex = 2;
-            this.label_sampleRate.Text = "采样率(S/s)";
+            this.label_sampleRate.Text = "采样率(S/s):";
             // 
             // label_channelNum
             // 
             this.label_channelNum.AutoSize = true;
             this.label_channelNum.Location = new System.Drawing.Point(18, 220);
             this.label_channelNum.Name = "label_channelNum";
-            this.label_channelNum.Size = new System.Drawing.Size(73, 21);
+            this.label_channelNum.Size = new System.Drawing.Size(106, 21);
             this.label_channelNum.TabIndex = 1;
-            this.label_channelNum.Text = "通道号";
+            this.label_channelNum.Text = "通 道 号:";
             // 
             // label_cardNum
             // 
             this.label_cardNum.AutoSize = true;
             this.label_cardNum.Location = new System.Drawing.Point(18, 103);
             this.label_cardNum.Name = "label_cardNum";
-            this.label_cardNum.Size = new System.Drawing.Size(73, 21);
+            this.label_cardNum.Size = new System.Drawing.Size(106, 21);
             this.label_cardNum.TabIndex = 0;
-            this.label_cardNum.Text = "板卡号";
+            this.label_cardNum.Text = "板 卡 号:";
             // 
             // comboBox_boardNum
             // 
+            this.comboBox_boardNum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_boardNum.FormattingEnabled = true;
+            this.comboBox_boardNum.Items.AddRange(new object[] {
+            "0",
+            "1"});
             this.comboBox_boardNum.Location = new System.Drawing.Point(160, 97);
             this.comboBox_boardNum.Name = "comboBox_boardNum";
             this.comboBox_boardNum.Size = new System.Drawing.Size(121, 29);
@@ -162,7 +166,18 @@
             // 
             // comboBox_channelNum
             // 
+            this.comboBox_channelNum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_channelNum.FormattingEnabled = true;
+            this.comboBox_channelNum.Items.AddRange(new object[]{
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            });
             this.comboBox_channelNum.Location = new System.Drawing.Point(160, 214);
             this.comboBox_channelNum.Name = "comboBox_channelNum";
             this.comboBox_channelNum.Size = new System.Drawing.Size(121, 29);
@@ -171,12 +186,28 @@
             // numericUpDown_sampleRate
             // 
             this.numericUpDown_sampleRate.Location = new System.Drawing.Point(160, 328);
+            this.numericUpDown_sampleRate.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericUpDown_sampleRate.Minimum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
             this.numericUpDown_sampleRate.Name = "numericUpDown_sampleRate";
             this.numericUpDown_sampleRate.Size = new System.Drawing.Size(120, 31);
             this.numericUpDown_sampleRate.TabIndex = 5;
+            this.numericUpDown_sampleRate.Value = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             // 
             // button_start
             // 
+            this.button_start.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button_start.Location = new System.Drawing.Point(1106, 670);
             this.button_start.Name = "button_start";
             this.button_start.Size = new System.Drawing.Size(124, 74);
@@ -186,6 +217,7 @@
             // 
             // button_stop
             // 
+            this.button_stop.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button_stop.Location = new System.Drawing.Point(1252, 670);
             this.button_stop.Name = "button_stop";
             this.button_stop.Size = new System.Drawing.Size(124, 74);
