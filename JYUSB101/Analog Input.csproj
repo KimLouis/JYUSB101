@@ -55,16 +55,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnalogInputForm.cs">
+    <Compile Include="Analog Input.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AnalogInputForm.Designer.cs">
-      <DependentUpon>AnalogInputForm.cs</DependentUpon>
+    <Compile Include="Analog Input.Designer.cs">
+      <DependentUpon>Analog Input.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AnalogInputForm.resx">
-      <DependentUpon>AnalogInputForm.cs</DependentUpon>
+    <EmbeddedResource Include="Analog Input.resx">
+      <DependentUpon>Analog Input.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

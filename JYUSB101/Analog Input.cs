@@ -29,15 +29,62 @@ namespace JYUSB101
         #endregion
 
         #region Event Handler
+
         // 设置comboBox的Index默认值
-        private void AnalogInputForm_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
             comboBox_boardNum.SelectedIndex = 0;
             comboBox_channelNum.SelectedIndex = 0;
         }
+
+        // 启动采集
+        private void button_start_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // 新建测量任务
+                aiTask = new JYUSB101AITask(comboBox_boardNum.SelectedIndex);
+                // 添加通道
+                aiTask.AddChannel(comboBox_channelNum.SelectedIndex);
+                // 配置基本参数
+                // 连续采集模式
+                aiTask.Mode = AIMode.Continuous;
+                // 设置采样率 Sample/s
+                aiTask.SampleRate = (double)numericUpDown_sampleRate.Value;
+                // 设置读取数量，默认设为采样率一半 Sample/s
+                readValue = new double[(int)aiTask.SampleRate / 2];
+                // 开始测量(调用timer)
+                aiTask.Start();
+                // 启动定时器
+                timer1.Enabled = true;
+                // 禁用参数配置和开始按钮
+                groupBox_parameter.Enabled = false;
+                button_start.Enabled = false;
+                toolStripStatusLabel.Text = "开始采集";
+            }
+            catch (JYDriverException ex)
+            {
+                toolStripStatusLabel.Text = "任务失败";
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        // 停止采集
+        private void button_stop_Click(object sender, EventArgs e)
+        {
+            if (aiTask != null)
+            {
+                aiTask.Stop();
+            }
+            //
+            timer1.Enabled = false;
+            groupBox_parameter.Enabled = true;
+            button_start.Enabled = true;
+            toolStripStatusLabel.Text = "停止采集";
+        }
+
+
         #endregion
-
-
 
 
     }
