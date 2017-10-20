@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace JYUSB101
 {
-    public partial class Form1 : Form
+    public partial class AnalogInputForm : Form
     {
-        public Form1()
+        public AnalogInputForm()
         {
             InitializeComponent();
         }
+
+        private void AnalogInputForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+     
     }
 }
