@@ -84,8 +84,47 @@ namespace JYUSB101
         }
 
 
+        // 关闭窗口
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // 判断是否任务存在
+            if (aiTask != null)
+            {
+                aiTask.Stop();
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Enabled = false;
+            //如果本地缓冲区数据足够则读取数据并显示，如果不够，返回
+            if (aiTask.AvailableSamples >= readValue.Length)
+            {
+                try
+                {
+                    //读取资料存储在readValue中
+                    aiTask.ReadData(ref readValue, readValue.Length, -1);
+                    toolStripStatusLabel.Text = "正在读取数据中...";
+                }
+                catch (JYDriverException ex)
+                {
+                    timer1.Enabled = false;
+                    toolStripStatusLabel.Text = "读取数据失败";
+                    //驱动错误信息显示
+                    MessageBox.Show(ex.Message);
+
+                }
+                //画图
+                easychart_wave.Plot(readValue);
+            }
+            timer1.Enabled = true;
+        }
         #endregion
 
+        private void comboBox_ChanNo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            toolStripStatusLabel.Text = "提示：输入方式为Pseudodifferential时可使用的通道号为0—7";
+        }
 
     }
 }

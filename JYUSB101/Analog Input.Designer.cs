@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.chart_wave = new SeeSharpTools.JY.GUI.EasyChart();
+            this.easychart_wave = new SeeSharpTools.JY.GUI.EasyChart();
             this.groupBox_parameter = new System.Windows.Forms.GroupBox();
             this.numericUpDown_sampleRate = new System.Windows.Forms.NumericUpDown();
             this.comboBox_channelNum = new System.Windows.Forms.ComboBox();
@@ -50,25 +50,25 @@
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // chart_wave
+            // easychart_wave
             // 
-            this.chart_wave.AxisYMax = double.NaN;
-            this.chart_wave.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.None;
-            this.chart_wave.ChartAreaBackColor = System.Drawing.Color.Empty;
-            this.chart_wave.EasyChartBackColor = System.Drawing.Color.White;
-            this.chart_wave.FixAxisX = false;
-            this.chart_wave.Font = new System.Drawing.Font("宋体", 10F);
-            this.chart_wave.LegendBackColor = System.Drawing.Color.Transparent;
-            this.chart_wave.LegendVisible = true;
-            this.chart_wave.Location = new System.Drawing.Point(0, 170);
-            this.chart_wave.MajorGridColor = System.Drawing.Color.Black;
-            this.chart_wave.MajorGridEnabled = true;
-            this.chart_wave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.chart_wave.MinorGridColor = System.Drawing.Color.Black;
-            this.chart_wave.MinorGridEnabled = false;
-            this.chart_wave.MinorGridType = SeeSharpTools.JY.GUI.EasyChart.GridStyle.Solid;
-            this.chart_wave.Name = "chart_wave";
-            this.chart_wave.Palette = new System.Drawing.Color[] {
+            this.easychart_wave.AxisYMax = double.NaN;
+            this.easychart_wave.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.None;
+            this.easychart_wave.ChartAreaBackColor = System.Drawing.Color.Empty;
+            this.easychart_wave.EasyChartBackColor = System.Drawing.Color.White;
+            this.easychart_wave.FixAxisX = false;
+            this.easychart_wave.Font = new System.Drawing.Font("宋体", 10F);
+            this.easychart_wave.LegendBackColor = System.Drawing.Color.Transparent;
+            this.easychart_wave.LegendVisible = true;
+            this.easychart_wave.Location = new System.Drawing.Point(0, 170);
+            this.easychart_wave.MajorGridColor = System.Drawing.Color.Black;
+            this.easychart_wave.MajorGridEnabled = true;
+            this.easychart_wave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.easychart_wave.MinorGridColor = System.Drawing.Color.Black;
+            this.easychart_wave.MinorGridEnabled = false;
+            this.easychart_wave.MinorGridType = SeeSharpTools.JY.GUI.EasyChart.GridStyle.Solid;
+            this.easychart_wave.Name = "easychart_wave";
+            this.easychart_wave.Palette = new System.Drawing.Color[] {
         System.Drawing.Color.Red,
         System.Drawing.Color.Blue,
         System.Drawing.Color.DeepPink,
@@ -77,7 +77,7 @@
         System.Drawing.Color.OrangeRed,
         System.Drawing.Color.DarkCyan,
         System.Drawing.Color.Black};
-            this.chart_wave.SeriesNames = new string[] {
+            this.easychart_wave.SeriesNames = new string[] {
         "Series1",
         "Series2",
         "Series3",
@@ -110,11 +110,11 @@
         "Series30",
         "Series31",
         "Series32"};
-            this.chart_wave.Size = new System.Drawing.Size(1077, 613);
-            this.chart_wave.TabIndex = 0;
-            this.chart_wave.XAxisLogarithmic = false;
-            this.chart_wave.YAutoEnable = true;
-            this.chart_wave.YAxisLogarithmic = false;
+            this.easychart_wave.Size = new System.Drawing.Size(1077, 613);
+            this.easychart_wave.TabIndex = 0;
+            this.easychart_wave.XAxisLogarithmic = false;
+            this.easychart_wave.YAutoEnable = true;
+            this.easychart_wave.YAxisLogarithmic = false;
             // 
             // groupBox_parameter
             // 
@@ -289,12 +289,13 @@
             this.Controls.Add(this.button_stop);
             this.Controls.Add(this.button_start);
             this.Controls.Add(this.groupBox_parameter);
-            this.Controls.Add(this.chart_wave);
+            this.Controls.Add(this.easychart_wave);
             this.Controls.Add(this.splitter_content);
             this.Controls.Add(this.label_title);
             this.Controls.Add(this.splitter);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "USB101模拟采集";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.groupBox_parameter.ResumeLayout(false);
             this.groupBox_parameter.PerformLayout();
@@ -308,7 +309,7 @@
 
         #endregion
 
-        private SeeSharpTools.JY.GUI.EasyChart chart_wave;
+        private SeeSharpTools.JY.GUI.EasyChart easychart_wave;
         private System.Windows.Forms.GroupBox groupBox_parameter;
         private System.Windows.Forms.Label label_sampleRate;
         private System.Windows.Forms.Label label_channelNum;
