@@ -60,10 +60,9 @@
             this.easychart_wave.Font = new System.Drawing.Font("宋体", 10F);
             this.easychart_wave.LegendBackColor = System.Drawing.Color.Transparent;
             this.easychart_wave.LegendVisible = true;
-            this.easychart_wave.Location = new System.Drawing.Point(0, 170);
+            this.easychart_wave.Location = new System.Drawing.Point(0, 121);
             this.easychart_wave.MajorGridColor = System.Drawing.Color.Black;
             this.easychart_wave.MajorGridEnabled = true;
-            this.easychart_wave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.easychart_wave.MinorGridColor = System.Drawing.Color.Black;
             this.easychart_wave.MinorGridEnabled = false;
             this.easychart_wave.MinorGridType = SeeSharpTools.JY.GUI.EasyChart.GridStyle.Solid;
@@ -110,7 +109,7 @@
         "Series30",
         "Series31",
         "Series32"};
-            this.easychart_wave.Size = new System.Drawing.Size(1077, 613);
+            this.easychart_wave.Size = new System.Drawing.Size(783, 438);
             this.easychart_wave.TabIndex = 0;
             this.easychart_wave.XAxisLogarithmic = false;
             this.easychart_wave.YAutoEnable = true;
@@ -124,16 +123,19 @@
             this.groupBox_parameter.Controls.Add(this.label_sampleRate);
             this.groupBox_parameter.Controls.Add(this.label_channelNum);
             this.groupBox_parameter.Controls.Add(this.label_cardNum);
-            this.groupBox_parameter.Location = new System.Drawing.Point(1084, 199);
+            this.groupBox_parameter.Location = new System.Drawing.Point(788, 142);
+            this.groupBox_parameter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox_parameter.Name = "groupBox_parameter";
-            this.groupBox_parameter.Size = new System.Drawing.Size(292, 407);
+            this.groupBox_parameter.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_parameter.Size = new System.Drawing.Size(212, 291);
             this.groupBox_parameter.TabIndex = 1;
             this.groupBox_parameter.TabStop = false;
             this.groupBox_parameter.Text = "基本参数设置";
             // 
             // numericUpDown_sampleRate
             // 
-            this.numericUpDown_sampleRate.Location = new System.Drawing.Point(160, 328);
+            this.numericUpDown_sampleRate.Location = new System.Drawing.Point(116, 234);
+            this.numericUpDown_sampleRate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericUpDown_sampleRate.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -145,7 +147,7 @@
             0,
             0});
             this.numericUpDown_sampleRate.Name = "numericUpDown_sampleRate";
-            this.numericUpDown_sampleRate.Size = new System.Drawing.Size(120, 31);
+            this.numericUpDown_sampleRate.Size = new System.Drawing.Size(87, 25);
             this.numericUpDown_sampleRate.TabIndex = 5;
             this.numericUpDown_sampleRate.Value = new decimal(new int[] {
             10000,
@@ -166,9 +168,10 @@
             "5",
             "6",
             "7"});
-            this.comboBox_channelNum.Location = new System.Drawing.Point(160, 214);
+            this.comboBox_channelNum.Location = new System.Drawing.Point(116, 153);
+            this.comboBox_channelNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox_channelNum.Name = "comboBox_channelNum";
-            this.comboBox_channelNum.Size = new System.Drawing.Size(121, 29);
+            this.comboBox_channelNum.Size = new System.Drawing.Size(89, 23);
             this.comboBox_channelNum.TabIndex = 4;
             // 
             // comboBox_boardNum
@@ -178,44 +181,49 @@
             this.comboBox_boardNum.Items.AddRange(new object[] {
             "0",
             "1"});
-            this.comboBox_boardNum.Location = new System.Drawing.Point(160, 97);
+            this.comboBox_boardNum.Location = new System.Drawing.Point(116, 69);
+            this.comboBox_boardNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox_boardNum.Name = "comboBox_boardNum";
-            this.comboBox_boardNum.Size = new System.Drawing.Size(121, 29);
+            this.comboBox_boardNum.Size = new System.Drawing.Size(89, 23);
             this.comboBox_boardNum.TabIndex = 3;
             // 
             // label_sampleRate
             // 
             this.label_sampleRate.AutoSize = true;
-            this.label_sampleRate.Location = new System.Drawing.Point(18, 337);
+            this.label_sampleRate.Location = new System.Drawing.Point(13, 241);
+            this.label_sampleRate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_sampleRate.Name = "label_sampleRate";
-            this.label_sampleRate.Size = new System.Drawing.Size(139, 21);
+            this.label_sampleRate.Size = new System.Drawing.Size(100, 15);
             this.label_sampleRate.TabIndex = 2;
             this.label_sampleRate.Text = "采样率(S/s):";
             // 
             // label_channelNum
             // 
             this.label_channelNum.AutoSize = true;
-            this.label_channelNum.Location = new System.Drawing.Point(18, 220);
+            this.label_channelNum.Location = new System.Drawing.Point(13, 157);
+            this.label_channelNum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_channelNum.Name = "label_channelNum";
-            this.label_channelNum.Size = new System.Drawing.Size(106, 21);
+            this.label_channelNum.Size = new System.Drawing.Size(76, 15);
             this.label_channelNum.TabIndex = 1;
             this.label_channelNum.Text = "通 道 号:";
             // 
             // label_cardNum
             // 
             this.label_cardNum.AutoSize = true;
-            this.label_cardNum.Location = new System.Drawing.Point(18, 103);
+            this.label_cardNum.Location = new System.Drawing.Point(13, 74);
+            this.label_cardNum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_cardNum.Name = "label_cardNum";
-            this.label_cardNum.Size = new System.Drawing.Size(106, 21);
+            this.label_cardNum.Size = new System.Drawing.Size(76, 15);
             this.label_cardNum.TabIndex = 0;
             this.label_cardNum.Text = "板 卡 号:";
             // 
             // button_start
             // 
             this.button_start.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button_start.Location = new System.Drawing.Point(1106, 664);
+            this.button_start.Location = new System.Drawing.Point(804, 474);
+            this.button_start.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_start.Name = "button_start";
-            this.button_start.Size = new System.Drawing.Size(124, 74);
+            this.button_start.Size = new System.Drawing.Size(90, 53);
             this.button_start.TabIndex = 2;
             this.button_start.Text = "开始";
             this.button_start.UseVisualStyleBackColor = true;
@@ -224,9 +232,10 @@
             // button_stop
             // 
             this.button_stop.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button_stop.Location = new System.Drawing.Point(1252, 664);
+            this.button_stop.Location = new System.Drawing.Point(911, 474);
+            this.button_stop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_stop.Name = "button_stop";
-            this.button_stop.Size = new System.Drawing.Size(124, 74);
+            this.button_stop.Size = new System.Drawing.Size(90, 53);
             this.button_stop.TabIndex = 3;
             this.button_stop.Text = "停止";
             this.button_stop.UseVisualStyleBackColor = true;
@@ -237,8 +246,9 @@
             this.splitter.BackColor = System.Drawing.Color.DodgerBlue;
             this.splitter.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitter.Location = new System.Drawing.Point(0, 0);
+            this.splitter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitter.Name = "splitter";
-            this.splitter.Size = new System.Drawing.Size(1397, 170);
+            this.splitter.Size = new System.Drawing.Size(1016, 121);
             this.splitter.TabIndex = 4;
             this.splitter.TabStop = false;
             // 
@@ -247,9 +257,10 @@
             this.label_title.AutoSize = true;
             this.label_title.BackColor = System.Drawing.Color.DodgerBlue;
             this.label_title.Font = new System.Drawing.Font("微软雅黑", 21.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label_title.Location = new System.Drawing.Point(44, 46);
+            this.label_title.Location = new System.Drawing.Point(32, 33);
+            this.label_title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_title.Name = "label_title";
-            this.label_title.Size = new System.Drawing.Size(523, 66);
+            this.label_title.Size = new System.Drawing.Size(380, 48);
             this.label_title.TabIndex = 5;
             this.label_title.Text = "USB101模拟采集实验";
             // 
@@ -257,9 +268,10 @@
             // 
             this.splitter_content.BackColor = System.Drawing.Color.White;
             this.splitter_content.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter_content.Location = new System.Drawing.Point(0, 170);
+            this.splitter_content.Location = new System.Drawing.Point(0, 121);
+            this.splitter_content.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitter_content.Name = "splitter_content";
-            this.splitter_content.Size = new System.Drawing.Size(1397, 613);
+            this.splitter_content.Size = new System.Drawing.Size(1016, 438);
             this.splitter_content.TabIndex = 6;
             this.splitter_content.TabStop = false;
             // 
@@ -268,9 +280,10 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 799);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 564);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1397, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1016, 22);
             this.statusStrip1.TabIndex = 7;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -279,12 +292,17 @@
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(0, 17);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 50;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1397, 821);
+            this.ClientSize = new System.Drawing.Size(1016, 586);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.button_stop);
             this.Controls.Add(this.button_start);
@@ -293,6 +311,7 @@
             this.Controls.Add(this.splitter_content);
             this.Controls.Add(this.label_title);
             this.Controls.Add(this.splitter);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainForm";
             this.Text = "USB101模拟采集";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);

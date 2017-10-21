@@ -55,7 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Analog Input.cs" />
+    <Compile Include="Analog Input.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Analog Input.Designer.cs">
       <DependentUpon>Analog Input.cs</DependentUpon>
     </Compile>
