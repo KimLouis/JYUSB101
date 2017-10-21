@@ -1,6 +1,6 @@
 ﻿namespace MutilChannels_Analog_Input
 {
-    partial class Form1
+    partial class MianForm
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -44,7 +44,7 @@
             this.splitter_content = new System.Windows.Forms.Splitter();
             this.label_title = new System.Windows.Forms.Label();
             this.splitter = new System.Windows.Forms.Splitter();
-            this.easyChart1 = new SeeSharpTools.JY.GUI.EasyChart();
+            this.easyChart_wave = new SeeSharpTools.JY.GUI.EasyChart();
             this.groupBox_parameter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_sampleRate)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -53,6 +53,7 @@
             // timer1
             // 
             this.timer1.Interval = 50;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // groupBox_parameter
             // 
@@ -99,14 +100,8 @@
             this.comboBox_channelNum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_channelNum.FormattingEnabled = true;
             this.comboBox_channelNum.Items.AddRange(new object[] {
-            "0",
             "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"});
+            "2"});
             this.comboBox_channelNum.Location = new System.Drawing.Point(116, 153);
             this.comboBox_channelNum.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_channelNum.Name = "comboBox_channelNum";
@@ -183,6 +178,7 @@
             this.button_stop.TabIndex = 10;
             this.button_stop.Text = "停止";
             this.button_stop.UseVisualStyleBackColor = true;
+            this.button_stop.Click += new System.EventHandler(this.button_stop_Click);
             // 
             // button_start
             // 
@@ -194,6 +190,7 @@
             this.button_start.TabIndex = 9;
             this.button_start.Text = "开始";
             this.button_start.UseVisualStyleBackColor = true;
+            this.button_start.Click += new System.EventHandler(this.button_start_Click);
             // 
             // splitter_content
             // 
@@ -229,24 +226,24 @@
             this.splitter.TabIndex = 11;
             this.splitter.TabStop = false;
             // 
-            // easyChart1
+            // easyChart_wave
             // 
-            this.easyChart1.AxisYMax = double.NaN;
-            this.easyChart1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.None;
-            this.easyChart1.ChartAreaBackColor = System.Drawing.Color.Empty;
-            this.easyChart1.EasyChartBackColor = System.Drawing.Color.White;
-            this.easyChart1.FixAxisX = false;
-            this.easyChart1.LegendBackColor = System.Drawing.Color.Transparent;
-            this.easyChart1.LegendVisible = true;
-            this.easyChart1.Location = new System.Drawing.Point(0, 121);
-            this.easyChart1.MajorGridColor = System.Drawing.Color.Black;
-            this.easyChart1.MajorGridEnabled = true;
-            this.easyChart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.easyChart1.MinorGridColor = System.Drawing.Color.Black;
-            this.easyChart1.MinorGridEnabled = false;
-            this.easyChart1.MinorGridType = SeeSharpTools.JY.GUI.EasyChart.GridStyle.Solid;
-            this.easyChart1.Name = "easyChart1";
-            this.easyChart1.Palette = new System.Drawing.Color[] {
+            this.easyChart_wave.AxisYMax = double.NaN;
+            this.easyChart_wave.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.None;
+            this.easyChart_wave.ChartAreaBackColor = System.Drawing.Color.Empty;
+            this.easyChart_wave.EasyChartBackColor = System.Drawing.Color.White;
+            this.easyChart_wave.FixAxisX = false;
+            this.easyChart_wave.LegendBackColor = System.Drawing.Color.Transparent;
+            this.easyChart_wave.LegendVisible = true;
+            this.easyChart_wave.Location = new System.Drawing.Point(0, 121);
+            this.easyChart_wave.MajorGridColor = System.Drawing.Color.Black;
+            this.easyChart_wave.MajorGridEnabled = true;
+            this.easyChart_wave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.easyChart_wave.MinorGridColor = System.Drawing.Color.Black;
+            this.easyChart_wave.MinorGridEnabled = false;
+            this.easyChart_wave.MinorGridType = SeeSharpTools.JY.GUI.EasyChart.GridStyle.Solid;
+            this.easyChart_wave.Name = "easyChart_wave";
+            this.easyChart_wave.Palette = new System.Drawing.Color[] {
         System.Drawing.Color.Red,
         System.Drawing.Color.Blue,
         System.Drawing.Color.DeepPink,
@@ -255,7 +252,7 @@
         System.Drawing.Color.OrangeRed,
         System.Drawing.Color.DarkCyan,
         System.Drawing.Color.Black};
-            this.easyChart1.SeriesNames = new string[] {
+            this.easyChart_wave.SeriesNames = new string[] {
         "Series1",
         "Series2",
         "Series3",
@@ -288,18 +285,18 @@
         "Series30",
         "Series31",
         "Series32"};
-            this.easyChart1.Size = new System.Drawing.Size(770, 435);
-            this.easyChart1.TabIndex = 15;
-            this.easyChart1.XAxisLogarithmic = false;
-            this.easyChart1.YAutoEnable = true;
-            this.easyChart1.YAxisLogarithmic = false;
+            this.easyChart_wave.Size = new System.Drawing.Size(770, 435);
+            this.easyChart_wave.TabIndex = 15;
+            this.easyChart_wave.XAxisLogarithmic = false;
+            this.easyChart_wave.YAutoEnable = true;
+            this.easyChart_wave.YAxisLogarithmic = false;
             // 
-            // Form1
+            // MianForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1031, 580);
-            this.Controls.Add(this.easyChart1);
+            this.Controls.Add(this.easyChart_wave);
             this.Controls.Add(this.groupBox_parameter);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.button_stop);
@@ -307,8 +304,10 @@
             this.Controls.Add(this.splitter_content);
             this.Controls.Add(this.label_title);
             this.Controls.Add(this.splitter);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MianForm";
+            this.Text = "MianForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MianForm_FormClosing);
+            this.Load += new System.EventHandler(this.MianForm_Load);
             this.groupBox_parameter.ResumeLayout(false);
             this.groupBox_parameter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_sampleRate)).EndInit();
@@ -336,7 +335,7 @@
         private System.Windows.Forms.Splitter splitter_content;
         private System.Windows.Forms.Label label_title;
         private System.Windows.Forms.Splitter splitter;
-        private SeeSharpTools.JY.GUI.EasyChart easyChart1;
+        private SeeSharpTools.JY.GUI.EasyChart easyChart_wave;
     }
 }
 
